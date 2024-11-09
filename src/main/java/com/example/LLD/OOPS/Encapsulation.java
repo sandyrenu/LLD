@@ -1,2 +1,4 @@
-package com.example.LLD.OOPS;public class Encapsulation {
+package com.example.LLD.OOPS;
+
+public class Encapsulation {
 }

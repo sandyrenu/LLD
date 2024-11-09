@@ -34,6 +34,16 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>3.1.0</version> <!-- Ensure this is a compatible version with your Spring Boot setup -->
+		</dependency>
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>4.3.1</version> <!-- Use the latest stable version -->
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
