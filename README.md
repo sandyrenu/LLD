@@ -7,3 +7,4 @@ Object Oriented Programming
 #swagger
 
 # redis configurations
+# Redis Cluster 
