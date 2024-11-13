@@ -1,5 +1,9 @@
 package DSA.BLIND75;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 public class TwoSum {
 
     public static void main(String[] args) {
@@ -8,13 +12,11 @@ public class TwoSum {
         int target = 5;
 
         // need to add the two integers and the target will be the sum variable
-
         // O(n^2)
 
         //brute force
         // add two loops and implement
-
-        for(int i = 0 ; i < a.length - 1; i++){
+        for(int i = 0 ; i < a.length - 1; i++) {
             for(int j = i + 1 ; j < a.length - 2 ; j++){
                 if(a[i] + a[j] == target){
                     System.out.println(i);
@@ -27,8 +29,41 @@ public class TwoSum {
 
         // O (nlog n)
         // sort the array and do two pointer approach
+        Arrays.sort(a);
+         int home = 0;
+         int end = a.length - 1;
+         while(home < end){
+             if(a[home] + a[end] == target){
+                 System.out.println(home);
+                 System.out.println(end);
+                 break;
+             }
+             else if(a[home] + a[end] > target){
+                 end--;
+             }
+             else{
+                 home++;
+             }
+         }
+
 
         // o(n)
         // using HashMap
+        Map<Integer,Integer> hashMap = new HashMap<>();
+         for(int i = 0 ; i < a.length; i++){
+             int target1 = target - a[i];
+
+             if(hashMap.containsKey(target1)){
+                 System.out.println("Optimsed");
+                 System.out.println(hashMap.get(target1));
+                 System.out.println(i);
+
+             }
+             else{
+                 hashMap.put(a[i], i);
+             }
+         }
+
+
     }
 }
