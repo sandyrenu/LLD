@@ -1,8 +1,6 @@
 package DSA.BLIND75;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class TwoSum {
 
@@ -45,25 +43,27 @@ public class TwoSum {
                  home++;
              }
          }
-
-
         // o(n)
         // using HashMap
+        // This code will work for negative numbers also and added the List<Integer>
+        List<List<Integer>> result = new ArrayList<>();
         Map<Integer,Integer> hashMap = new HashMap<>();
          for(int i = 0 ; i < a.length; i++){
              int target1 = target - a[i];
-
              if(hashMap.containsKey(target1)){
+                 List<Integer> temp = new ArrayList<>();
+                 temp.add(hashMap.get(target1));
+                 temp.add(i);
                  System.out.println("Optimsed");
-                 System.out.println(hashMap.get(target1));
-                 System.out.println(i);
-
+//                 System.out.println(hashMap.get(target1));
+//                 System.out.println(i);
+                 System.out.println(temp);
+                result.add(temp);
              }
              else{
                  hashMap.put(a[i], i);
              }
          }
-
-
+        System.out.println(result);
     }
 }
